@@ -1,5 +1,5 @@
 ### Hafıza Güvenliği
-Bir programlama dili olarak Rust'ın önemini tartışmadan önce, bellek güvenliğinin aslında ne anlama geldiğini anlamak gereklidir. Tecrübelerini; sistem programcılığına uygun olmayan veya çöp toplama mekanizmasına sahip diller aracılığıyla edinmiş programcılar için Rust'un temel özelliklerinin ayırdına varmak biraz zor olabilir.
+Bir programlama dili olarak Rust'ın önemini tartışmadan önce, bellek güvenliğinin aslında ne anlama geldiğini tartışmak önemidir. Tecrübelerini; sistem programcılığına uygun olmayan veya çöp toplama mekanizmasına sahip diller aracılığıyla edinmiş programcılar için Rust'un temel özelliklerinin ayırdına varmak biraz zor olabilir.
 
 Will Crichton'ın, **Rust' ta Bellek Güvenliği: C ile Bir Örnek Çalışma​** adlı önemli makalesinde belirtildiği gibi: *“Hafıza güvenliği, kullanılan işaretçilerin daima doğru tür/boyutta tahsis edilen geçerli hafızaya işaret ettiği bir programlama özelliğidir. Güvensiz hafızaya sahip bir program, hatalarına bağlı olarak teknik olmayan çıktılar üretebileceği ya da kendiliğinden çökebileceğinden, hafıza
 güvenliği bir doğruluk sorunudur.”* 
