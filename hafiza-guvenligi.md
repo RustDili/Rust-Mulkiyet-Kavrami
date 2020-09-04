@@ -1,9 +1,9 @@
 ### Hafıza Güvenliği
-Bir programlama dili olarak Rust'ın önemini tartışmadan önce, bellek güvenliğinin aslında ne anlama geldiğini tartışmak önemidir. Tecrübelerini; sistem programcılığına uygun olmayan veya çöp toplama mekanizmasına sahip diller aracılığıyla edinmiş programcılar için Rust'un temel özelliklerinin ayırdına varmak biraz zor olabilir.
+Bir programlama dili olarak Rust'ın önemini tartışmadan önce, bellek güvenliğinin aslında ne anlama geldiğini tartışmak önemidir. Tecrübelerini sistem programcılığına uygun olmayan veya çöp toplama mekanizmasına sahip diller aracılığıyla edinmiş programcılar için Rust'un temel özelliklerinin ayırdına varmak biraz zor olabilir.
 
 Will Crichton'ın, **Rust' ta Bellek Güvenliği: C ile Bir Örnek Çalışma​** adlı önemli makalesinde belirtildiği gibi: *“Hafıza güvenliği, kullanılan işaretçilerin daima doğru tür/boyutta tahsis edilen geçerli hafızaya işaret ettiği bir programlama özelliğidir. Güvensiz hafızaya sahip bir program, hatalarına bağlı olarak teknik olmayan çıktılar üretebileceği ya da kendiliğinden çökebileceğinden, hafıza
 güvenliği bir doğruluk sorunudur.”* 
-Haliyle bu ifadeden, uygulamada **hafıza güvenliği sağlamadan** kod yazılmasına izin veren programlama dillerinin varlığını keçfediyor ve bunların aşağıdaki türden sorunlara neden olabileceğini öğreniyoruz.
+Haliyle bu ifadeden, uygulamada **hafıza güvenliği sağlamadan** kod yazılmasına izin veren programlama dillerinin varlığını keşfediyor ve bunların aşağıdaki türden sorunlara neden olabileceğini öğreniyoruz.
 
 **Dangling Pointers:​** Geçersiz ya da silinmiş verileri gösteren işaretçiler. (Bu türden sorunlarla karşılaşıldığında verinin bellekte nasıl depolandığına bakılması mantıklı olacaktır. [Daha fazla bilgi için](https://stackoverflow.com/questions/17997228/what-is-a-dangling-pointer)
 
