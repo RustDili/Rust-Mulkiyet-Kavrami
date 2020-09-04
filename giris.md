@@ -11,8 +11,8 @@ açılarına hakim olan programcıların mantıklı bulduğu kodlar Rust ile den
 
 Rust dilinde mülkiyet, öylesine önemli bir kavramdır ki, bu kavramı mümkün olduğunca erken
 anlamak, derleyici hatalarını değerlendirmek ve dili daha çabuk kavramak açısından oldukça
-yararlıdır. Ancak Rust’ın bu kavramları verilerin hafızada depolanma şekli ve hafıza güvenliği ile
-doğrudan ilişkili olduğundan kavramların doğru ve tutarlı anlaşılabilmesi için öncelikle bu konuları
-incelenmesi oldukça önemlidir.
+yararlıdır. Borçlanma, yaşam süresi gibi kavramlar ise, verilerin hafızada tutulma şekli ve hafıza güvenliği ile
+doğrudan ilişkili olduğundan, Rust'ın doğru ve tutarlı biçimde anlaşılabilmesi bu kavramların derinlemesine
+incelenmesi ve öğrenilmesi önemlidir.
 
 Bu döküman Rust programlama dilini tercih eden geliştiricilerin Mülkiyet Kavramını anlamasına yardımcı olacaktır.   
