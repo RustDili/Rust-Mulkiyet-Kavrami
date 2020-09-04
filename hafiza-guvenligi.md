@@ -38,4 +38,4 @@ stack frame │ • │ 16 │ 15 │ <– s
 
 `D` ve `Golang` gibi yeni nesil diller bu tür sorunların üstesinden, bünyelerinde bulundurdukları çöp toplayıcı mekanizmalar sayesinde gelirler. Bu mekanizmalar ise, programın işletilmesi sırasında daha fazla kullanılmayan ve hafızaya geri verilmesi gereken her şeyi, tespit ederek sisteme geri verimekle yükümlüdürler. Çöp toplama mekanizmalarına sahip programlama dilleri her ne kadar şirin görünseler de, gerçekleştirdikleri işlemler programın çalışma zamanı ve performansını etkiler.
 
-Rust bu sorunların üstesinden çöp toplama mekanizması kullarak değil, hafıza güvenliğini garanti altına alan **mülkiyet** ve **borçlanma** sistematiğini kullanarak geliyor. O nedenle **Rust’ta hafıza güvenliği** demekle, *derleyicinin güvensiz kod yazılmasına izin vermeyeceği* anlatılmak istenir.
+Rust hafıza güvenliği sorunlarının üstesinden çöp toplama mekanizması kullanmak yerine, hafıza güvenliğini garanti altına alan **mülkiyet** ve **borçlanma** sistematiğini kullanarak geliyor. O nedenle **Rust’ta hafıza güvenliği** demekle, *derleyicinin güvensiz kod yazılmasına izin vermeyeceği* anlatılmak istenir.
