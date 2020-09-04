@@ -1,15 +1,15 @@
 ### Yaşam Alanı ve Süresi
-Rust programlarında bazı değişkenler tanımlandıkları esnada hiçbir kaynağa sahip olmayabilirler. Bununla birlikte sistemden alınmış bulunan her kaynağın sadece bir sahibi bulunur. 
+Rust programlarında bazı değişkenler tanımlandıkları esnada hiçbir kaynağa sahip olmayabilirken, sistemden alınan her kaynağın tek bir sahibi olur. 
 Benzer şekilde bir değerin sahibine o değerin mülkiyeti bıraktırıldığında, *-ki buna Rust programcıları mülkiyetin düşürülmesi der-* sahip olunan değer de düşürülür. Daha da ilginci, değişkenin bildirildiği **blok kapsamı**, **işlev**, **if ifadesi** veya süslü parantezler arasında sunulan bir **kod bloğu** vb. sonlandırıldığı anda; hem değişken hem de içerdiği değer düşürülür
 
 ```Rust
 fn selamla() {
   let baglam = "İyi günler dilerim".to_string();
   println!("{}", baglam); // `baglam` değişkeni de burada düşürülür.
-}
+} // değişken düşürülür
 ```
 
-Yukarıdaki örneğe bakıldığında, işlev bloğunun sonunda `s` değişken değerinin düşürüleceğini bildiğimizden, değişkenin yaşam alanını net biçimde gözlemleyebiliyoruz. Bu durum daha karmaşık veri yapılarında da aynen geçerlidir.
+Yukarıdaki örnek incelendiğinde, işlev bloğunun sonunda `baglam` değişken değerinin düşürüleceğini bildiğimizden, değişkenin yaşam alanını net biçimde gözlemleyebiliyoruz. Bu durum daha karmaşık veri yapılarında da aynen geçerlidir.
 
 ```rust
 let names = vec!["Pascal".to_string(), "Christoph".to_string()];
