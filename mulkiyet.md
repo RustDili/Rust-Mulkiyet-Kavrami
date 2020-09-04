@@ -1,5 +1,5 @@
 ### Mülkiyet Kavramını Anlamak
-Çöp toplayıcısına sahip olmayan düşük seviyeli dillerde, değişkenler için ayrılan kaynakların hafızaya iade edilmesinden programcının kendisi sorumludur. Programın akışı içerisinde programcı; işlemlerinde kullandığı kaynaklarla işini bitirdiğinde ya da programın o kaynağa ihtiyacı olmadığını düşündüğünde, kaynağı serbest bırakarak kullanılan bellek alanını iade eder. Böyle bir örneğin **C** dilindeki karşılığı işaretçi kullanılarak aşağıdaki şekilde yazılabilir.
+Çöp toplayıcısına sahip olmayan düşük seviyeli dillerde, değişkenler için ayrılan kaynakların hafızaya iade edilmesinden programcının kendisi sorumludur. Geliştirici kontrol akışı süresince kullandığı kaynakların işleri bittiğinde ya da programın o kaynağa ihtiyacı olmadığını düşündüğünde, kaynağı serbest bırakarak kullanılan bellek alanını işletim sistemine iade etmekten sorumludur. Böyle bir programın **C** dilinde yazılmış ve işaretçi kullanan bir örneği aşağıdaki şekilde yazılabilir.
 
 ```c
     int main(int argc, const char * argv[]) {
