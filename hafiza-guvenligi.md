@@ -1,15 +1,14 @@
 ### Hafıza Güvenliği
-Bir programlama dili olarak Rust'ın önemini tartışmadan önce, bellek güvenliğinin aslında ne anlama geldiğini tartışmak önemidir. Tecrübelerini sistem programcılığına uygun olmayan veya çöp toplama mekanizmasına sahip diller aracılığıyla edinmiş programcılar için Rust'un temel özelliklerinin ayırdına varmak biraz zor olabilir.
+Bir programlama dili olarak Rust'ın önemini tartışmadan önce, bellek güvenliğinin aslında ne anlama geldiğini anlamak önemidir. Tecrübelerini sistem programcılığına uygun olmayan yahut çöp toplama mekanizmasına sahip diller aracılığıyla edinmiş programcılar için Rust'un temel özelliklerini ayırt etmek zor olabilir.
 
-Will Crichton'ın, **Rust' ta Bellek Güvenliği: C ile Bir Örnek Çalışma​** adlı önemli makalesinde belirtildiği gibi: *“Hafıza güvenliği, kullanılan işaretçilerin daima doğru tür/boyutta tahsis edilen geçerli hafızaya işaret ettiği bir programlama özelliğidir. Güvensiz hafızaya sahip bir program, hatalarına bağlı olarak teknik olmayan çıktılar üretebileceği ya da kendiliğinden çökebileceğinden, hafıza
-güvenliği bir doğruluk sorunudur.”* 
-Haliyle bu ifadeden, uygulamada **hafıza güvenliği sağlamadan** kod yazılmasına izin veren programlama dillerinin varlığını keşfediyor ve bunların aşağıdaki türden sorunlara neden olabileceğini öğreniyoruz.
+Will Crichton'ın, **Rust' ta Bellek Güvenliği: C ile Bir Örnek Çalışma​** adlı önemli makalesinde belirtildiği gibi: *“Hafıza güvenliği, kullanılan işaretçilerin daima doğru tür/boyutta tahsis edilen geçerli hafızaya işaret ettiği bir programlama özelliğidir. Güvensiz hafızaya sahip bir program, hatalarına bağlı olarak teknik olmayan çıktılar üretebileceği ya da kendiliğinden çökebileceğinden, hafıza güvenliği bir doğruluk sorunudur.”* 
+Bu ifadeden de anlaşılacağı gibi, uygulamada **hafıza güvenliği sağlamadan** kod yazmaya izin veren programlama dillerinin var olduğunu anlıyoruz. Hafıza güvenliği sunmayan programların ise aşağıdaki türden sorunlara neden oldukları sır değil:
 
-**Dangling Pointers:​** Geçersiz ya da silinmiş verileri gösteren işaretçiler. (Bu türden sorunlarla karşılaşıldığında verinin bellekte nasıl depolandığına bakılması mantıklı olacaktır. [Daha fazla bilgi için](https://stackoverflow.com/questions/17997228/what-is-a-dangling-pointer)
+* **Sarkan İşaretçiler:​** Geçersiz ya da silinmiş verileri gösteren işaretçiler. (Bu türden sorunlarla karşılaşıldığında verinin bellekte nasıl depolandığına bakılması mantıklı olacaktır. [Daha fazla bilgi için](https://stackoverflow.com/questions/17997228/what-is-a-dangling-pointer)
 
-**Double frees:** Aynı hafıza bölgesini iki kere boşaltmaya çalışarak *tanımsız davranışlara* yol açmak [Daha fazla bilgi için​](https://stackoverflow.com/questions/21057393/what-does-double-free-mean)
+* **Çift Boşaltma:** Aynı hafıza bölgesini iki kere boşaltmaya çalışarak *tanımsız davranışlara* yol açmak [Daha fazla bilgi için​](https://stackoverflow.com/questions/21057393/what-does-double-free-mean)
 
-**Dangling pointer** kavramını izah edebilmek için aşağıda bulunan D kodunun hafızada nasıl temsil edildiğini inceleyelim.
+**Sarkan İşaretçiler** kavramını izah edebilmek için aşağıda bulunan D kodunun hafızada nasıl temsil edildiğini inceleyelim.
 
 ```d
 string s = "Have a nice day";
